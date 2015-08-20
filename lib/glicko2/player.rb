@@ -57,7 +57,7 @@ module Glicko2
       if others.compact.length < 1
         generate_next_without_games
       else
-        others = others.map{ |other| other.rating }
+        others = others.compact.map{ |other| other.rating }
         generate_next_with_games(others, scores)
       end
     end
