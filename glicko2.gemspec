@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'glicko2/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "glicko2"
+  gem.name          = "compact-glicko2"
   gem.version       = Glicko2::VERSION
-  gem.authors       = ["James Fargher"]
-  gem.email         = ["proglottis@gmail.com"]
-  gem.description   = %q{Implementation of Glicko2 ratings}
-  gem.summary       = %q{Implementation of Glicko2 ratings}
-  gem.homepage      = "https://github.com/proglottis/glicko2"
+  gem.authors       = ["James Fargher", "Andrej Antas"]
+  gem.email         = ["proglottis@gmail.com", "andrej@antas.cz"]
+  gem.description   = %q{Implementation of Glicko2 ratings with compact rule}
+  gem.summary       = %q{Implementation of Glicko2 ratings with compact rule}
+  gem.homepage      = "https://github.com/redrick/glicko2"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
