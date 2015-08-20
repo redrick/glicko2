@@ -46,7 +46,7 @@ module Glicko2
       p = []
       @players.each do |player|
         games = @games[player]
-        if games.length > 0
+        if games.compact.length > 0
           p << player.generate_next(*games.transpose)
         else
           p << player.generate_next([], [])

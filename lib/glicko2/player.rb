@@ -54,7 +54,7 @@ module Glicko2
     #   `0.5` for a draw and `1` for a win).
     # @return [Player]
     def generate_next(others, scores)
-      if others.length < 1
+      if others.compact.length < 1
         generate_next_without_games
       else
         others = others.map{ |other| other.rating }
